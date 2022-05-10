@@ -1,1 +1,5 @@
-// Do stuff in the main context of discord.
+try {
+    require("./dist/main");
+} catch (error) {
+    console.error(error);
+}

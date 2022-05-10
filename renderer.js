@@ -1,9 +1,1 @@
-export default new class PluginTemplate {
-    start() {
-        console.log("Hello World!");
-    }
-
-    stop() {
-        console.log("Bye World!");
-    }
-}
+export {default as default} from "./dist/renderer.js";

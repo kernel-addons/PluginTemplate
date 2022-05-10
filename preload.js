@@ -1,1 +1,5 @@
-// Do something in the preload of discord.
+try {
+    require("./dist/preload");
+} catch (error) {
+    console.error(error);
+}
