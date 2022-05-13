@@ -24,10 +24,12 @@ module.exports = args => {
         node: {
             __dirname: false
         },
-        externals: Object.fromEntries(
-            Object.keys(dependencies).concat(
-                builtinModules.flatMap(mod => [mod, `node:${mod}`])
-            ).map(mod => [mod, mod])
+        externals: Object.assign({electron: "electron"},
+            Object.fromEntries(
+                Object.keys(dependencies).concat(
+                    builtinModules.flatMap(mod => [mod, `node:${mod}`])
+                ).map(mod => [mod, mod])
+            ),
         ),
         module: {
             rules: [
